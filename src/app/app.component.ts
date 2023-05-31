@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'onomatopia';
+  title = 'Output';
+
+  onomatopoeiaList: string[] = ["ah", "oh", "wow"];
+
+  onReceiveNewOnomatopia(event: string): void {
+    this.onomatopoeiaList.push(event);
+  }
 }
+
